@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Loja Fictícia de Roupas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .topbar {
+      background-color: #ffffff;
+      padding: 10px 20px;
+      text-align: right;
+    }
+
+    .topbar a {
+      color: #121212;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    .topbar img {
+      height: 24px;
+      width: auto;
+      vertical-align: middle;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #000;
+      padding: 10px 20px;
+    }
+
+    .navbar .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+    }
+
+    .navbar ul li {
+      margin-left: 20px;
+    }
+
+    .navbar ul li a {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .hero {
+      background: url('https://hypedfam.com/cdn/shop/articles/48d9f3_5128db0e59264804aa6b86ede5487921_mv2.png?v=1688816469') no-repeat center center/cover;
+      height: 740px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1, .hero p {
+      color: #FFD700;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      padding: 15px 30px;
+      background-color: #FFD700;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      text-shadow: 1px 1px 0 #000;
+    }
+
+    .cta-button:hover {
+      background-color: #e6c200;
+    }
+
+    .brand-carousel-container {
+      background-color: #1a1a1a;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 20px 0;
+    }
+
+    .brand-carousel-track {
+      display: inline-block;
+      animation: scroll 25s linear infinite;
+    }
+
+    .brand-carousel-track span {
+      display: inline-block;
+      margin: 0 40px;
+      font-size: 20px;
+      color: #fff;
+      font-weight: 500;
+    }
+
+    @keyframes scroll {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Nova seção de roupas */
+    .colecao {
+      padding: 40px 20px;
+      background-color: #181818;
+      text-align: center;
+    }
+
+    .colecao h2 {
+      color: #FFD700;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .produto {
+      background-color: #222;
+      border-radius: 8px;
+      padding: 15px;
+      width: 200px;
+      transition: transform 0.3s;
+    }
+
+    .produto:hover {
+      transform: scale(1.05);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .produto h3 {
+      color: #fff;
+      font-size: 18px;
+      margin: 10px 0 5px;
+    }
+
+    .produto p {
+      color: #FFD700;
+      font-size: 16px;
+    }
+
+    .footer {
+      background-color: #1e1e1e;
+      color: #888;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .navbar ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+      }
+
+      .hero {
+        height: 400px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .navbar .logo img {
+        height: 40px;
+      }
+
+      .brand-carousel-track span {
+        font-size: 16px;
+        margin: 0 30px;
+      }
+
+      .produto {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="https://wa.me/1234567890" target="_blank"><img src="imagens/app.png" alt="WhatsApp"></a>
+    <a href="https://instagram.com" target="_blank"><img src="imagens/insta.png" alt="Instagram"></a>
+  </div>
+
+  <div class="navbar">
+    <div class="logo">
+      <img src="imagens/logo street models.png" alt="Street Models Logo">
+    </div>
+    <ul>
+      <li><a href="">Menu</a></li>
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#promocoes">Promoções</a></li>
+      <li><a href="file:///D:/carrinho.html.html">Carrinho</a></li>
+    </ul>
+  </div>
+
+  <div class="hero">
+    <div>
+      <h1>Transforme Seu Estilo</h1>
+      <p>Encontre as últimas tendências da moda com exclusividade.</p>
+      <button class="cta-button">Confira Agora</button>
+    </div>
+  </div>
+
+  <!-- Carrossel de Marcas -->
+  <div class="brand-carousel-container">
+    <div class="brand-carousel-track">
+      <span>Nike</span>
+      <span>Corteiz</span>
+      <span>Adidas</span>
+      <span>Puma</span>
+      <span>Louis Vuitton</span>
+      <span>Off White</span>
+      <span>Nike</span>
+      <span>Corteiz</span>
+      <span>Adidas</span>
+      <span>Puma</span>
+      <span>Louis Vuitton</span>
+      <span>Off White</span>
+    </div>
+  </div>
+
+  <!-- Seção de Roupas -->
+  <section class="colecao">
+    <h2>Novidades da Coleção</h2>
+    <div class="produtos">
+      <div class="produto">
+        <img src="imagens/nike.jpg" alt="Camiseta Nike">
+        <h3>Camiseta Nike</h3>
+        <p>R$ 129,90</p>
+      </div>
+      <div class="produto">
+        <img src="imagens/corteiz.jpg" alt="Moletom Corteiz">
+        <h3>Moletom Corteiz</h3>
+        <p>R$ 299,90</p>
+      </div>
+      <div class="produto">
+        <img src="imagens/adidas.jpg" alt="Jaqueta Adidas">
+        <h3>Jaqueta Adidas</h3>
+        <p>R$ 349,90</p>
+      </div>
+      <div class="produto">
+        <img src="imagens/puma.jpg" alt="Boné Puma">
+        <h3>Boné Puma</h3>
+        <p>R$ 89,90</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <div class="footer">
+    <p>&copy; 2025 Loja Fictícia de Roupas. Todos os direitos reservados.</p>
+    <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Uso</a></p>
+  </div>
+</body>
+</html>
